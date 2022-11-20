@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RxStompService } from '../rx-stomp.service';
+import { Message } from '@stomp/stompjs';
 
 @Component({
   selector: 'app-consumer',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsumerComponent implements OnInit {
 
-  constructor() { }
+  messages: Array<string> = [];
+
+  constructor(private rxStompService: RxStompService) { }
 
   ngOnInit(): void {
+    this.rxStompService.watch('/topic/demo').subscribe((message: Message) => {
+      this.messages.push(message.body);
+    });
   }
 
 }
