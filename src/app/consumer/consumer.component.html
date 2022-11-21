@@ -1,5 +1,6 @@
 <p>consumer works!</p>
-
+<input type="text" [(ngModel)]="chatMessage">
+<button (click)="onSendMessage()">Send Message</button>
 <h2>Received messages</h2>
   <ol>
     <!-- we will use Angular binding to populate list of messages -->

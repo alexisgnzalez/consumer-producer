@@ -8,6 +8,7 @@ import { ConsumerComponent } from './consumer/consumer.component';
 import { ProducerComponent } from './producer/producer.component';
 import { RxStompService } from './rx-stomp.service';
 import { rxStompServiceFactory } from './rx-stomp-service-factory';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { rxStompServiceFactory } from './rx-stomp-service-factory';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     {
