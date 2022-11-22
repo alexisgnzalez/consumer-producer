@@ -2,7 +2,7 @@ import { RxStompConfig } from '@stomp/rx-stomp';
 
 export const myRxStompConfig: RxStompConfig = {
   // Which server?
-  brokerURL: 'wss://stomp-server-alexis.web.app/connections',
+  brokerURL: 'wss://192.168.0.166:61614/connections',
 
   // Headers
   // Typical keys: login, passcode, host
